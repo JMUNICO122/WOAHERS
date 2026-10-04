@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project — Description</title>
+  <link rel="stylesheet" href="profile-styles.css">
+  <link rel="stylesheet" href="project-description.css">
+</head>
+<body>
+  <header class="clean-nav">
+  <div class="nav-container">
+    <a href="projects.html" class="logo-link">
+      <span class="logo-text">WOAHWERS</span>
+      <div class="logo-dot"></div>
+    </a>
+
+    <div class="nav-actions">
+      <a href="projects.html" class="btn btn-secondary">← Back to List</a>
+      
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <div id="project-container" class="project-container"></div>
+  </main>
+
+  <script src="projects-data.js" defer></script>
+  <script src="project-description.js" defer></script>
+  <script>
+    // set project action button link based on current id
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(location.search);
+      const id = params.get('id');
+      const btn = document.getElementById('project-action-btn');
+      if (btn && id) {
+        // point to a page for edit/details - change as needed
+        btn.setAttribute('href', `project-edit.html?id=${encodeURIComponent(id)}`);
+      } else if (btn) {
+        btn.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

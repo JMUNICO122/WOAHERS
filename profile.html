@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Profile - WOAHWERS</title>
+    <link rel="stylesheet" href="profile-styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg-video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="bsu.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-element el-1"></div>
+        <div class="float-element el-2"></div>
+        <div class="float-element el-3"></div>
+    </div>
+
+    <nav class="clean-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="home.html" class="logo-link">
+                    <span class="logo-text">WOAHWERS</span>
+                    <div class="logo-dot"></div>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="member.html" class="nav-link">Members</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">
+    <span class="toggle-circle"></span>
+</button>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="member.html" class="back-btn">
+            ← Back to Members
+        </a>
+        
+        <div id="profile-container" class="profile-card">
+            <div class="loading-placeholder">
+                <div class="loading-spinner"></div>
+                <p>Loading profile...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="clean-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">WOAHWERS</div>
+                <p>Pushing the boundaries of technology and creativity in CICS.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="home.html">Home</a>
+                <a href="member.html">Members</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>CICS Building</p>
+                <p>University Campus</p>
+                <p>hello@woahwers.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 WOAHWERS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="profile.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        });
+        
+    </script>
+</body>
+</html>

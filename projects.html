@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects</title>
+
+  <!-- reuse profile/member styles for consistent look -->
+  <link rel="stylesheet" href="profile-styles.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+     <div class="bg-video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="bsu" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+  <header class="clean-nav">
+  <div class="nav-container">
+    <div class="logo" data-aos="fade-right">
+      <span class="logo-text">WOAHWERS</span>
+      <div class="logo-dot"></div>
+    </div>
+
+    <!-- Updated navigation order -->
+    <ul class="nav-links" data-aos="fade-left">
+    <li><a href="home.html" class="nav-link">Home</a></li>
+    <li><a href="member.html" class="nav-link">Members</a></li>
+    <li><a href="projects.html" class="nav-link">Projects</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+</ul>
+
+
+    
+  </div>
+</header>
+
+  
+
+  <main>
+    <section id="projects-grid" class="projects-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="clean-footer">
+        <div class="footer-container">
+            <div class="footer-section" data-aos="fade-up">
+                <div class="footer-logo">WOAHWERS</div>
+                <p>Pushing the boundaries of technology and creativity in CICS.</p>
+            </div>
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                <h4>Quick Links</h4>
+                <a href="home.html">Home</a>
+                <a href="member.html">Members</a>
+                <a href="projects.html">Projects</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="400">
+                <h4>Contact</h4>
+                <p>CICS Building</p>
+                <p>University Campus</p>
+                <p>hello@woahwers.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 WOAHWERS. All rights reserved.</p>
+        </div>
+    </footer>
+
+  <script src="projects-data.js" defer></script>
+  <script src="projects-list.js" defer></script>
+
+  <script>
+  // Get current page filename
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Select all nav links
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    // Get the href of the link
+    const linkPage = link.getAttribute("href");
+
+    // If href matches current page, add active class
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>
